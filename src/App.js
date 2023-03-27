@@ -32,6 +32,11 @@ export default function App() {
       </button>
 
       <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
+      <br />
+      <p>{starWarsData.name}</p>
+      <p>{starWarsData.gender}</p>
+      <p>{starWarsData.birth_year}</p>
+      <p>{starWarsData.homeworld}</p>
     </div>
   );
 }
