@@ -21,7 +21,8 @@ export default function App() {
 
   return (
     <div>
-      <h2>The count is {count}</h2>
+      <h5>Name: {starWarsData.name}</h5>
+      <br />
       {/* prettier-ignore */}
       <button style={btnSpacing} onClick={() => setCount(prevCount => prevCount - 1)}>
         Get Prev Character
@@ -30,13 +31,35 @@ export default function App() {
       <button style={btnSpacing} onClick={() => setCount(prevCount => prevCount + 1)}>
         Get Next Character
       </button>
-
-      <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
+      {/* brings in entire api object */}
+      {/* <pre>{JSON.stringify(starWarsData, null, 2)}</pre> */}
       <br />
-      <p>{starWarsData.name}</p>
-      <p>{starWarsData.gender}</p>
-      <p>{starWarsData.birth_year}</p>
-      <p>{starWarsData.homeworld}</p>
+      <ul>
+        <li>
+          <h3>{starWarsData.name}</h3>
+        </li>
+        <li>
+          <span class="bold">Height:</span> {starWarsData.height}
+        </li>
+        <li>
+          <span class="bold">Mass:</span> {starWarsData.mass}
+        </li>
+        <li>
+          <span class="bold">Hair Color:</span> {starWarsData.hair_color}
+        </li>
+        <li>
+          <span class="bold">Skin Color:</span> {starWarsData.skin_color}
+        </li>
+        <li>
+          <span class="bold">Eye Color:</span> {starWarsData.eye_color}
+        </li>
+        <li>
+          <span class="bold">Birth Year:</span> {starWarsData.birth_year}
+        </li>
+        <li>
+          <span class="bold">Homeworld:</span> {starWarsData.homeworld}
+        </li>
+      </ul>
     </div>
   );
 }
